@@ -1,0 +1,216 @@
+TEST CASE ID: TC-001
+TITLE: LOGIN_TEST (Sign Up → Log in)
+OBJECTIVE: Verify a user can sign up and then log in successfully.
+PRECONDITIONS:
+
+App reachable at ${baseUrl}.
+
+Test credentials available: ${login}, ${password}.
+TEST DATA:
+
+Username: ${login}
+
+Password: ${password}
+STEPS:
+
+Open browser → ${baseUrl} (Chrome).
+
+Click Sign up (${signUpButton}) and wait for form to appear (${signUpUsername}, ${signUpPassword}).
+
+Enter ${login} and ${password}; submit (${signUpFormButton}).
+
+Handle any sign-up confirmation (alert or modal) if shown.
+
+Click Log in (${logInButton}); wait for fields (${loginUsernameField}, ${loginPasswordField}).
+
+Enter ${login} / ${password}; submit (${logInFormButton}).
+EXPECTED RESULT:
+
+Sign-up completes (system accepts new credentials or indicates “user already exists” in which case proceed to login).
+
+After login, user is authenticated (e.g., Log out button ${logoutButton} becomes visible / username shown).
+POSTCONDITIONS:
+
+User session established.
+
+TEST CASE ID: TC-002
+TITLE: CONTACT_FUNCTIONALITY
+OBJECTIVE: Verify that submitting the Contact form triggers confirmation.
+PRECONDITIONS:
+
+App reachable at ${baseUrl}.
+TEST DATA:
+
+Email: ${contactEmailText}
+
+Name: ${contactNameText}
+
+Message: ${contactMessageText}
+STEPS:
+
+Open browser → ${baseUrl} (Chrome).
+
+Click Contact nav (${contactNav}); wait for fields (${contactEmailField}, ${contactNameField}, ${contactMessageField}).
+
+Populate all three fields with provided data.
+
+Click Send message (${contactSendMessageButton}).
+EXPECTED RESULT:
+
+A browser alert appears with text: Thanks for the message!!.
+
+Alert can be accepted.
+POSTCONDITIONS:
+
+N/A.
+
+TEST CASE ID: TC-003
+TITLE: BUY_PRODUCT (happy path checkout)
+OBJECTIVE: Verify a user can add a product to cart and complete purchase successfully.
+PRECONDITIONS:
+
+App reachable at ${baseUrl}.
+
+Place Order modal available from Cart.
+TEST DATA:
+
+Name: ${placeOrderName}
+
+Country: ${placeOrderCountry}
+
+City: ${placeOrderCity}
+
+Credit card: ${placeOrderCreditCard}
+
+Month: ${placeOrderMonth}
+
+Year: ${placeOrderYear}
+STEPS:
+
+Open browser → ${baseUrl} (Chrome).
+
+Open first product card (${card}) then click Add to cart (${addToCartBtn}); accept added-to-cart alert.
+
+Navigate to Cart (${cartNav}).
+
+Click Place Order (${placeOrderBtn}); wait for order form fields.
+
+Fill all fields: name, country, city, card, month, year.
+
+Click Purchase (${purchaseButton}).
+
+Capture success modal header text via ${successMessage}.
+
+Click OK to close success modal (${purchaseOkButton}).
+EXPECTED RESULT:
+
+Success modal appears and <h2> contains Thank you for your purchase!.
+
+Modal can be dismissed via OK.
+POSTCONDITIONS:
+
+Cart is cleared (if app behaves so) or order recorded.
+
+TEST CASE ID: TC-004
+TITLE: BUY_PRODUCT_NEGATIVE (empty required fields)
+OBJECTIVE: Verify validation prevents purchase when required fields are empty.
+PRECONDITIONS:
+
+App reachable at ${baseUrl}.
+TEST DATA:
+
+Leave order fields blank.
+STEPS:
+
+Open browser → ${baseUrl} (Chrome).
+
+Open product (${card}) → Add to cart (${addToCartBtn}) → accept alert.
+
+Go to Cart (${cartNav}).
+
+Click Place Order (${placeOrderBtn}); do not fill fields.
+
+Click Purchase (${purchaseButton}).
+EXPECTED RESULT:
+
+Browser alert appears with exact text: Please fill out Name and Creditcard.
+
+Purchase is not submitted; modal stays open (until user closes).
+POSTCONDITIONS:
+
+No order created.
+
+TEST CASE ID: TC-005
+TITLE: DELETE_ELEMENT_FROM_CART
+OBJECTIVE: Verify an item can be removed from the cart and row count updates accordingly.
+PRECONDITIONS:
+
+App reachable at ${baseUrl}.
+TEST DATA:
+
+N/A
+STEPS:
+
+Open browser → ${baseUrl} (Chrome).
+
+Open a product (${card}) → Add to cart (${addToCartBtn}) → accept alert.
+
+Add the same (or another) product again → accept alert.
+
+Navigate to Cart (${cartNav}); wait for rows.
+
+Click delete for first row (${deleteElementFromCart1}).
+
+Wait for table to update, then get element count of ${cartTable} rows.
+EXPECTED RESULT:
+
+After deletion, the cart row count equals 1.
+POSTCONDITIONS:
+
+Cart contains 1 remaining line item.
+
+TEST CASE ID: TC-006
+TITLE: CATEGORY_SWITCH (filter by “Laptops”)
+OBJECTIVE: Verify switching category filters the product list and shows expected first card.
+PRECONDITIONS:
+
+App reachable at ${baseUrl}.
+TEST DATA:
+
+Expected first laptop title substring: Sony vaio i5.
+STEPS:
+
+Open browser → ${baseUrl} (Chrome).
+
+Wait for category control, click Laptops (${categoryLaptop}).
+
+Wait for first card title (${cardOne}); get its text.
+
+Click the first card to ensure navigation works.
+EXPECTED RESULT:
+
+Get Text from ${cardOne} contains Sony vaio i5.
+
+Product page opens after click.
+POSTCONDITIONS:
+
+N/A.
+
+TEST CASE ID: TC-007
+TITLE: LOGOUT_TEST
+OBJECTIVE: Verify a logged-in user can log out successfully.
+PRECONDITIONS:
+
+Valid session created with ${login} / ${password}. (In suite, [Setup] Log in runs.)
+TEST DATA:
+
+N/A
+STEPS:
+
+Ensure user is logged in (e.g., ${logoutButton} visible).
+
+Click Log out (${logoutButton}).
+EXPECTED RESULT:
+
+Session terminates; Log in (${logInButton}) becomes visible again and username/Log out are not shown.
+POSTCONDITIONS:
