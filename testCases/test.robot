@@ -4,7 +4,7 @@ Suite Teardown    Close Browser
 
 
 *** Variables ***
-${REMOTE_URL}                https://${BROWSERSTACK_USERNAME}:${BROWSERSTACK_ACCESS_KEY}@hub.browserstack.com/wd/hub
+${REMOTE_URL}                https://%{BROWSERSTACK_USERNAME}:%{BROWSERSTACK_ACCESS_KEY}@hub.browserstack.com/wd/hub
 *** Keywords ***
 
 *** Test Cases ***
