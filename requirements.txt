@@ -11,7 +11,7 @@ PySocks
 robotframework
 robotframework-pythonlibcore
 robotframework-seleniumlibrary
-selenium
+selenium==4.9.1
 sniffio
 sortedcontainers
 trio

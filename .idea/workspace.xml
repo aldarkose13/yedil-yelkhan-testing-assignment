@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6aed24c4-eaf0-4e60-83c8-dd6491a554a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/locators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/resources.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/testData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testCases/test.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TestAutomationLecture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TestAutomationLecture.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/browserstack.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/resources.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/resources.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/testData.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/testData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCases/test.robot" beforeDir="false" afterPath="$PROJECT_DIR$/testCases/test.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,33 +36,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Rebasing main",
-    "last_opened_file_path": "C:/Users/User/Desktop/KBTU/Testing/Automation Assignment/SoftwareTestingLEcture2025",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/User/Desktop/KBTU/Testing/robot-browserstack-main",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Robot.CONTACT_FUNCTIONALITY">
-    <configuration name="BUY_PRODUCT_TEST" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
-      <module name="TestAutomationLecture" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\User\Desktop\KBTU\Testing\Automation Assignment\SoftwareTestingLEcture2025\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="robot.run" />
-      <option name="PARAMETERS" value="--test &quot;SoftwareTestingLEcture2025.testCases.test.BUY_PRODUCT_TEST&quot; ." />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="true" />
-      <option name="MODULE_MODE" value="true" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Robot.LOGIN_TEST">
     <configuration name="BUY_PRODUCT_TEST_NEGATIVE" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
       <module name="TestAutomationLecture" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,13 +126,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="LOGIN_TEST" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
+      <module name="TestAutomationLecture" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\User\Desktop\KBTU\Testing\Automation Assignment\SoftwareTestingLEcture2025\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="robot.run" />
+      <option name="PARAMETERS" value="--test &quot;SoftwareTestingLEcture2025.testCases.test.LOGIN_TEST&quot; ." />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Robot.LOGIN_TEST" />
         <item itemvalue="Robot.CONTACT_FUNCTIONALITY" />
         <item itemvalue="Robot.CATEGORY_SWITCH" />
         <item itemvalue="Robot.DELETE_ELEMENT_FROM_CART" />
         <item itemvalue="Robot.BUY_PRODUCT_TEST_NEGATIVE" />
-        <item itemvalue="Robot.BUY_PRODUCT_TEST" />
       </list>
     </recent_temporary>
   </component>
