@@ -6,7 +6,7 @@ Suite Teardown    Close Browser
 *** Variables ***
 
 # change depending on using local or jenkins from % to $
-${REMOTE_URL}                https://${BROWSERSTACK_USERNAME}:${BROWSERSTACK_ACCESS_KEY}@hub.browserstack.com/wd/hub
+${REMOTE_URL}                https://%{BROWSERSTACK_USERNAME}:%{BROWSERSTACK_ACCESS_KEY}@hub.browserstack.com/wd/hub
 *** Keywords ***
 
 *** Test Cases ***

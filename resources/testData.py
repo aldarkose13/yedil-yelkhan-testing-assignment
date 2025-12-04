@@ -2,8 +2,6 @@ login = 'aronTest1'
 password = '12345678'
 
 baseUrl = 'https://www.demoblaze.com/'
-BROWSERSTACK_USERNAME = 'yedilyelkhan_WuHOjb'
-BROWSERSTACK_ACCESS_KEY = 'XXyGCmr7zBxN7Z1yEiYG'
 
 
 placeOrderName = 'Test'
