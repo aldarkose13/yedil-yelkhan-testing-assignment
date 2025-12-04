@@ -1,0 +1,15 @@
+2025-12-04T14:13:48Z [browserstack_sdk.__init__][INFO] - SDK run started with id: 7474e77e-5641-4bc6-b709-0185ac0f7d19
+2025-12-04T14:13:48Z [browserstack_sdk.__init__][INFO] - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2025-12-04T14:13:51Z [browserstack_sdk.__init__][INFO] - Setting up for Browserstack, using framework: robot
+==============================================================================
+Test                                                                          
+==============================================================================
+LOGIN_TEST                                                            2025-12-04T14:13:51Z [browserstack_sdk.__init__][INFO] - Completed setup!
+| PASS |
+------------------------------------------------------------------------------
+Test                                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\User\Desktop\KBTU\Testing\Automation Assignment\SoftwareTestingLEcture2025\pabot_results\2\output.xml
+2025-12-04T14:14:17Z [browserstack_sdk.__init__][INFO] - Handling session close
+2025-12-04T14:14:17Z [browserstack_sdk.__init__][INFO] - All done!

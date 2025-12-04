@@ -5,19 +5,9 @@ Variables   ./testData.py
 
 *** Keywords ***
 Log in
-    [Arguments]    ${BROWSER}
-    
-     &{caps}=    Create Dictionary
-    ...    browser=${BROWSER}
-    ...    browser_version=latest
-    ...    os=Windows
-    ...    os_version=11
-    ...    name=Login Test
-    ...    build=Robot Local Build
-
 
 #    Open Browser    ${baseUrl}      Chrome  options=binary_location=r"C:\\Users\\User\\Desktop\\KBTU\\Testing\\chrome-win64\\chrome.exe"
-    Create Webdriver    Remote    command_executor=${REMOTE_URL}    desired_capabilities=${caps}
+    Create Webdriver    Remote    command_executor=${REMOTE_URL}
     Go To    ${baseUrl}
     Maximize Browser Window
     wait until page contains element    ${logInButton}    timeout=80      error=logInButtonNotFound
@@ -31,21 +21,14 @@ Log in
     Click Element    ${logInFormButton}
     Sleep    2s
 
+
 Close Browser
     Close All Browsers
 
 Sign Up
-    [Arguments]    ${BROWSER}
 
-     &{caps}=    Create Dictionary
-    ...    browser=${BROWSER}
-    ...    browser_version=latest
-    ...    os=Windows
-    ...    os_version=11
-    ...    name=Login Test
-    ...    build=Robot Local Build
 #    Open Browser    ${baseUrl}      Chrome  options=binary_location=r"C:\\Users\\User\\Desktop\\KBTU\\Testing\\chrome-win64\\chrome.exe"
-    Create Webdriver    Remote    command_executor=${REMOTE_URL}    desired_capabilities=${caps}
+    Create Webdriver    Remote    command_executor=${REMOTE_URL}
     Go To    ${baseUrl}
     Maximize Browser Window
     wait until page contains element    ${signUpButton}    timeout=80      error=logInButtonNotFound
@@ -68,17 +51,10 @@ Log Out
     Click Element    ${logoutButton}
 
 Buy Product
-    [Arguments]    ${BROWSER}
 
-     &{caps}=    Create Dictionary
-    ...    browser=${BROWSER}
-    ...    browser_version=latest
-    ...    os=Windows
-    ...    os_version=11
-    ...    name=Login Test
-    ...    build=Robot Local Build
+
 #    Open Browser    ${baseUrl}      Chrome  options=binary_location=r"C:\\Users\\User\\Desktop\\KBTU\\Testing\\chrome-win64\\chrome.exe"
-    Create Webdriver    Remote    command_executor=${REMOTE_URL}    desired_capabilities=${caps}
+    Create Webdriver    Remote    command_executor=${REMOTE_URL}
     Go To    ${baseUrl}
     Maximize Browser Window
     wait until page contains element     ${card}    timeout=80      error=CardNotFound
@@ -112,17 +88,9 @@ Buy Product
 
 
 Buy Product Empty Fields
-    [Arguments]    ${BROWSER}
 
-     &{caps}=    Create Dictionary
-    ...    browser=${BROWSER}
-    ...    browser_version=latest
-    ...    os=Windows
-    ...    os_version=11
-    ...    name=Login Test
-    ...    build=Robot Local Build
 #    Open Browser    ${baseUrl}      Chrome  options=binary_location=r"C:\\Users\\User\\Desktop\\KBTU\\Testing\\chrome-win64\\chrome.exe"
-    Create Webdriver    Remote    command_executor=${REMOTE_URL}    desired_capabilities=${caps}
+    Create Webdriver    Remote    command_executor=${REMOTE_URL}
     Go To    ${baseUrl}
     Maximize Browser Window
     wait until page contains element     ${card}    timeout=80      error=CardNotFound
@@ -145,17 +113,9 @@ Buy Product Empty Fields
     Alert Should Be Present   Please fill out Name and Creditcard.
 
 Switch Category
-    [Arguments]    ${BROWSER}
 
-     &{caps}=    Create Dictionary
-    ...    browser=${BROWSER}
-    ...    browser_version=latest
-    ...    os=Windows
-    ...    os_version=11
-    ...    name=Login Test
-    ...    build=Robot Local Build
 #    Open Browser    ${baseUrl}      Chrome  options=binary_location=r"C:\\Users\\User\\Desktop\\KBTU\\Testing\\chrome-win64\\chrome.exe"
-    Create Webdriver    Remote    command_executor=${REMOTE_URL}    desired_capabilities=${caps}
+    Create Webdriver    Remote    command_executor=${REMOTE_URL}
     Go To    ${baseUrl}
     Maximize Browser Window
     wait until page contains element     ${card}    timeout=80      error=CardNotFound
@@ -170,17 +130,9 @@ Switch Category
     Sleep    2s
 
 Delete Element From Cart
-     [Arguments]    ${BROWSER}
 
-     &{caps}=    Create Dictionary
-    ...    browser=${BROWSER}
-    ...    browser_version=latest
-    ...    os=Windows
-    ...    os_version=11
-    ...    name=Login Test
-    ...    build=Robot Local Build
 #    Open Browser    ${baseUrl}      Chrome  options=binary_location=r"C:\\Users\\User\\Desktop\\KBTU\\Testing\\chrome-win64\\chrome.exe"
-    Create Webdriver    Remote    command_executor=${REMOTE_URL}    desired_capabilities=${caps}
+    Create Webdriver    Remote    command_executor=${REMOTE_URL}
     Go To    ${baseUrl}
     Maximize Browser Window
     wait until page contains element     ${card}    timeout=80      error=CardNotFound
@@ -207,17 +159,9 @@ Delete Element From Cart
 
 
 Contact
-     [Arguments]    ${BROWSER}
 
-     &{caps}=    Create Dictionary
-    ...    browser=${BROWSER}
-    ...    browser_version=latest
-    ...    os=Windows
-    ...    os_version=11
-    ...    name=Login Test
-    ...    build=Robot Local Build
 #    Open Browser    ${baseUrl}      Chrome  options=binary_location=r"C:\\Users\\User\\Desktop\\KBTU\\Testing\\chrome-win64\\chrome.exe"
-    Create Webdriver    Remote    command_executor=${REMOTE_URL}    desired_capabilities=${caps}
+    Create Webdriver    Remote    command_executor=${REMOTE_URL}
     Go To    ${baseUrl}
     Maximize Browser Window
     wait until page contains element    ${contactNav}    timeout=80      error=contactNavNotFound

@@ -21,3 +21,5 @@ urllib3
 websocket-client
 wsproto
 browserstack-local
+browserstack-sdk
+robotframework-pabot
