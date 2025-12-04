@@ -1,5 +1,4 @@
-#userName: scripteezer_ZchGD5
-#accessKey: 41z2WNJpdY2VYNHfENJe
+
 username: ${BROWSERSTACK_USERNAME}
 accessKey: ${BROWSERSTACK_ACCESS_KEY}
 framework: robot
